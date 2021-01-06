@@ -2710,6 +2710,15 @@ func (f *Fpdf) MultiCell(w, h float64, txtStr, borderStr, alignStr string, fill 
 			ns++
 		}
 		if int(c) >= len(cw) {
+			// character outside the supported range, skip it
+			if f.isCurrentUTF8 {
+				srune = append(srune[:i], srune[i+1:]...)
+			} else {
+				s = s[:i] + s[i+1:]
+			}
+			nb--
+			continue
+
 			f.err = fmt.Errorf("character outside the supported range: %s", string(c))
 			return
 		}
