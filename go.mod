@@ -1,4 +1,4 @@
-module github.com/DesignersAxis/gofpdf
+module github.com/DesignersAxis/gofpdf/v2
 
 go 1.15
 
