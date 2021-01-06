@@ -3,11 +3,11 @@ module github.com/DesignersAxis/gofpdf/v2
 go 1.15
 
 require (
+	github.com/DesignersAxis/gofpdf v0.0.0-00010101000000-000000000000
 	github.com/boombuler/barcode v1.0.0
 	github.com/phpdave11/gofpdi v1.0.13
-	github.com/pkg/errors v0.9.1 // indirect
 	github.com/ruudk/golang-pdf417 v0.0.0-20181029194003-1af4ab5afa58
 	golang.org/x/image v0.0.0-20190910094157-69e4b8554b2a
 )
 
-replace gofpdf => ./
+replace github.com/DesignersAxis/gofpdf => ./
